@@ -2,20 +2,21 @@
 #ifndef PRIMITIVES_H_
 #define PRIMITIVES_H_
 #include <bits/stdc++.h>
+
 using namespace std;
 
 
 //n-input bools
-bool _AND(vector<bool>*inputs){
-  if (((*inputs)[1]==true) && std::adjacent_find((*inputs).begin(),(*inputs).end(), std::not_equal_to<>()) == (*inputs).end()){
+bool _AND(const vector<bool>&inputs){
+  if (std::find((inputs).begin(), (inputs).end(), false)==(inputs).end()){
     return true;
   }
   return false;
 }
 
 //n-input bools
-bool _OR(vector<bool>*inputs){
-  if (std::find((*inputs).begin(), (*inputs).end(), true) != (*inputs).end()){
+bool _OR(const vector<bool>&inputs){
+  if (std::find((inputs).begin(), inputs.end(), true) != (inputs).end()){
     return true;
   }
   return false;
@@ -27,16 +28,16 @@ bool _NOT(bool input){
 }
 
 //n-input bools
-bool _NAND(vector<bool>*inputs){
-  if (std::find((*inputs).begin(), (*inputs).end(), false) != (*inputs).end()){
+bool _NAND(const vector<bool>&inputs){
+  if (std::find((inputs).begin(), (inputs).end(), false) != (inputs).end()){
     return true;
   }
   return false;
 }
 
 //n-input bools
-bool _NOR(vector<bool>*inputs){
-  if (std::find((*inputs).begin(), (*inputs).end(), true) != (*inputs).end()){
+bool _NOR(const vector<bool>&inputs){
+  if (std::find((inputs).begin(), (inputs).end(), true) != (inputs).end()){
     return false;
   }
   return true;
