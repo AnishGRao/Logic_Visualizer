@@ -3,8 +3,10 @@
 #include "Primitives.h"
 #include "Circuit.h"
 #include "Clock_Sensitive.h"
-void output_cleaner(vector<bool>&binary){
-  for (auto bit : binary){
+void output_cleaner(vector<bool> &binary)
+{
+  for (auto bit : binary)
+  {
     if (!bit)
       binary.erase(binary.begin());
     else
@@ -12,8 +14,10 @@ void output_cleaner(vector<bool>&binary){
   }
 }
 
-
-int main() {
+int main(int argc, char **argv)
+{
+  parser();
+  /*
   vector<bool> hatred={true,true,true,true};
   //test: 10, 9
   //out: 14

@@ -6,6 +6,7 @@
 #include <chrono>
 #include <iostream>
 
+//todo implement threading for the clock_sensitive latch mechanisms
 
 void test(){
     return;
