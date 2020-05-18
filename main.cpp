@@ -16,7 +16,21 @@ void output_cleaner(vector<bool> &binary)
 
 int main(int argc, char **argv)
 {
-  parser();
+  //parser();
+  GATES one;
+  one.type="AND";
+  one.dependencies={"dep_1", "dep_2"};
+  GATES two;
+  two.type="XOR";
+  two.dependencies={"dep_1", "dep_2"};
+  GATES three;
+  three.type="AND";
+  three.dependencies={"dep_1", "dep_2"};
+  GATES four;
+  four.type="NAND";
+  four.dependencies={"dep_1", "dep_2"};
+  circuit["test"]={one, two, three, four};
+  connector();
   /*
   vector<bool> hatred={true,true,true,true};
   //test: 10, 9
